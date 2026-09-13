@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
+import { InvestigationsPage } from "@/components/ares-pages";
+export const Route = createFileRoute("/investigations")({ validateSearch: z.object({ incident: z.string().optional() }), head: () => ({ meta: [{ title: "Investigations — ARES" }, { name: "description", content: "Investigate correlated threat activity and evidence." }, { property: "og:title", content: "Investigations — ARES" }, { property: "og:description", content: "Investigate correlated threat activity and evidence." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: InvestigationsPage });

@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
+import { ReportsPage } from "@/components/ares-pages";
+export const Route = createFileRoute("/reports")({ validateSearch: z.object({ incident: z.string().optional() }), head: () => ({ meta: [{ title: "Commander BLUF Reports — ARES" }, { name: "description", content: "Generate executive threat intelligence BLUF reports." }, { property: "og:title", content: "Commander BLUF Reports — ARES" }, { property: "og:description", content: "Generate executive threat intelligence BLUF reports." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: ReportsPage });

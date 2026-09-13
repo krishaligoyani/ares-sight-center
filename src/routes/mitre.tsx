@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { z } from "zod";
+import { MitrePage } from "@/components/ares-pages";
+export const Route = createFileRoute("/mitre")({ validateSearch: z.object({ technique: z.string().optional() }), head: () => ({ meta: [{ title: "MITRE ATT&CK Matrix — ARES" }, { name: "description", content: "Map observed adversary techniques to incidents." }, { property: "og:title", content: "MITRE ATT&CK Matrix — ARES" }, { property: "og:description", content: "Map observed adversary techniques to incidents." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: MitrePage });
