@@ -26,11 +26,13 @@ export const alerts: Alert[] = [
   { id: "ALT-29387", title: "DNS query entropy threshold exceeded", severity: "Low", source: "Network Sensors", score: 37, correlation: "Uncorrelated", status: "Uninvestigated", time: "06:31:48Z", incident: "INC-0060", analyst: "Unassigned" },
 ];
 
+type Incident = { id: string; name: string; title: string; severity: Severity; score: number; confidence: number; assets: number; status: string; analyst: string };
+
 export const incidents = [
   { id: "INC-0047", name: "OP NIGHTFALL", title: "Coordinated credential compromise", severity: "Critical" as Severity, score: 97, confidence: 94, assets: 7, status: "Active", analyst: "M. Chen" },
   { id: "INC-0049", name: "OP SILENT WIRE", title: "Command-and-control infrastructure", severity: "Critical" as Severity, score: 95, confidence: 91, assets: 4, status: "Escalated", analyst: "J. Rivera" },
   { id: "INC-0051", name: "OP ORBITAL LOCK", title: "Satellite telemetry access anomaly", severity: "High" as Severity, score: 86, confidence: 82, assets: 3, status: "In Review", analyst: "S. Okafor" },
-];
+] satisfies [Incident, ...Incident[]];
 
 export const sourceHealth = [
   { name: "SIEM", status: "Operational", events: "8.42M", sync: "12 sec ago", format: "Syslog", quality: 99 },
