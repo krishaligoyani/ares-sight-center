@@ -5,4 +5,4 @@
 - [x] Build investigations and MITRE matrix
 - [x] Build intelligence sources and BLUF reports
 - [x] Connect navigation and analyst actions
-- [ ] Verify desktop and mobile rendering
+- [x] Verify desktop and mobile rendering
