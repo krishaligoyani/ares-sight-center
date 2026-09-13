@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SourcesPage } from "@/components/ares-pages";
+export const Route = createFileRoute("/sources")({ head: () => ({ meta: [{ title: "Intelligence Sources — ARES" }, { name: "description", content: "Monitor ARES intelligence source health and ingest." }, { property: "og:title", content: "Intelligence Sources — ARES" }, { property: "og:description", content: "Monitor intelligence source health and ingest." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: SourcesPage });

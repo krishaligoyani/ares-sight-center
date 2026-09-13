@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { AlertsPage } from "@/components/ares-pages";
+export const Route = createFileRoute("/alerts")({ head: () => ({ meta: [{ title: "Alert Intelligence — ARES" }, { name: "description", content: "Search and triage correlated security alerts." }, { property: "og:title", content: "Alert Intelligence — ARES" }, { property: "og:description", content: "Search and triage correlated security alerts." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: AlertsPage });

@@ -1,0 +1,3 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { SettingsPage } from "@/components/ares-pages";
+export const Route = createFileRoute("/settings")({ head: () => ({ meta: [{ title: "Settings — ARES" }, { name: "description", content: "ARES analyst workspace settings." }, { property: "og:title", content: "Settings — ARES" }, { property: "og:description", content: "ARES analyst workspace settings." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }] }), component: SettingsPage });
